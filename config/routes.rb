@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  devise_for :users, path: '', path_names: {
+    sign_in: 'login',
+    sign_out: 'logout',
+    sign_up: 'register'
+  }
   resources :rooms
   #ruta de inicio dirije al cotrolador pagina y accion home
   root to: "pages#home"
