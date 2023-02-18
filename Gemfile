@@ -65,3 +65,4 @@ group :development do
 end
 
 gem 'devise', '~> 4.9'
+gem 'faker', '~> 3.1', '>= 3.1.1'
