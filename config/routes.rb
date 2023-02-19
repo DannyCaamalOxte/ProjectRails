@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   }
   resources :rooms
   #ruta de inicio dirije al cotrolador pagina y accion home
-  root to: "pages#home"
+  root to: "rooms#index"
 
   get "home", to: 'pages#home'
   get "about", to: 'pages#about'
