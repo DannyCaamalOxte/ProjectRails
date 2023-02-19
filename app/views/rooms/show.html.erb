@@ -11,7 +11,8 @@
             <% if logged_in?(:site_admin) %>
                 <div>
                 <%= link_to 'Editar', edit_room_path(@room), class: 'btn btn-warning' %>
-                <%= link_to 'Eliminar', @room, method: :delete, data: { confirm: '¿Estás seguro?' }, class: 'btn btn-danger' %>
+                <!--<%= link_to 'Eliminar', @room, method: :delete, data: { confirm: '¿Estás seguro?' }, class: 'btn btn-danger' %>-->
+                <%= link_to "Eliminar2", @room, data: { turbo_method: :delete, confirm:'¿Estás seguro?' }, class:'btn btn-danger' %>
                 </div>
             <% end %>
         </div>
