@@ -4,7 +4,13 @@ Rails.application.routes.draw do
     sign_out: 'logout',
     sign_up: 'register'
   }
-  resources :rooms
+
+  resources :rooms do
+    member do
+      get :reserve
+    end
+  end
+  ##resources :rooms
   #ruta de inicio dirije al cotrolador pagina y accion home
   root to: "rooms#index"
 
